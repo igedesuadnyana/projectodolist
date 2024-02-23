@@ -1,0 +1,133 @@
+body {
+  background: linear-gradient(90deg, rgb(222, 21, 175) 0%, rgb(158, 198, 13) 50%, rgb(106, 69, 252) 100%);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.todo-wrapper {
+  margin: 50px auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  font-weight: 300;
+  text-align: center;
+  padding-left: 20px;
+  max-width: 500px; /* Menggunakan max-width untuk mengatur lebar maksimum */
+}
+
+.todo-wrapper h2 {
+  margin: 0;
+}
+
+.todo-wrapper p {
+  font-style: italic;
+  color: #000;
+  margin: 5px 0;
+}
+
+.todo-wrapper ol {
+  margin: 20px 0;
+  padding: 0;
+}
+
+.todo-wrapper ol li {
+  margin: 5px 0;
+  padding: 3px;
+  user-select: none;
+  transition: all 0.5s ease-out;
+}
+
+.todo-wrapper ol li:nth-child(even) {
+  background: #ddd;
+}
+
+.todo-wrapper .completed {
+  text-decoration: line-through;
+  color: black;
+}
+
+.todo-wrapper .pretty-button {
+  margin: 10px 2px;
+  padding: 5px 20px;
+  border-radius: 15px;
+  background-color: rgb(11, 11, 148);
+  border: none;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  font-size: small;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.todo-wrapper .pretty-button:hover {
+  opacity: 0.75;
+}
+
+.todo-wrapper input {
+  padding: 3px 6px;
+}
+
+.todo-wrapper form {
+  display: inline-block;
+}
+
+#control-wrapper {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#clear-button {
+  background-color: rgb(16, 8, 142);
+}
+
+#empty-button {
+  background-color: rgb(219, 24, 47);
+}
+
+#save-button {
+  background-color: rgb(16, 200, 77);
+}
+
+#todo-list {
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 27px;
+}
+
+#todo-entry-box {
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  width: calc(100% - 20px); /* Menggunakan kalkulasi untuk menghitung lebar */
+  height: 30px;
+  margin: 0 auto;
+  display: block;
+}
+
+#todo-entry-box:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries untuk responsif */
+@media screen and (max-width: 600px) {
+  .todo-wrapper {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 100%; /* Maksimum lebar sesuai dengan ukuran layar */
+  }
+
+  #todo-list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #todo-entry-box {
+    padding: 8px;
+    height: 25px;
+  }
+}
